@@ -1,0 +1,700 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Classic Cuts Barbershop - Premium Men's Grooming</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@400;700;900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+    />
+    <style>
+      /* Barbershop-specific styles */
+      .hero {
+        background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
+          url("https://images.unsplash.com/photo-1585747860715-2ba37e788b70?ixlib=rb-4.0.3&auto=format&fit=crop&w=1470&q=80");
+        background-size: cover;
+        background-position: center;
+        background-attachment: fixed;
+      }
+
+      .hero-title {
+        font-family: "Playfair Display", serif;
+        font-size: 4rem;
+        font-weight: 900;
+      }
+
+      .hero-subtitle {
+        font-family: "Playfair Display", serif;
+        font-size: 1.5rem;
+        font-style: italic;
+      }
+
+      .services-section {
+        padding: 5rem 0;
+        background: #f8fafc;
+      }
+
+      .service-card {
+        background: white;
+        border-radius: 15px;
+        padding: 2rem;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        transition: all 0.3s ease;
+        text-align: center;
+        position: relative;
+        overflow: hidden;
+      }
+
+      .service-card::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: -100%;
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(
+          90deg,
+          transparent,
+          rgba(139, 69, 19, 0.1),
+          transparent
+        );
+        transition: left 0.5s;
+      }
+
+      .service-card:hover::before {
+        left: 100%;
+      }
+
+      .service-card:hover {
+        transform: translateY(-10px);
+        box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+      }
+
+      .service-icon {
+        width: 80px;
+        height: 80px;
+        background: linear-gradient(135deg, #8b4513 0%, #d2691e 100%);
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin: 0 auto 1rem;
+      }
+
+      .service-icon i {
+        font-size: 2rem;
+        color: white;
+      }
+
+      .service-card h3 {
+        font-size: 1.5rem;
+        margin-bottom: 1rem;
+        color: #1f2937;
+      }
+
+      .service-card p {
+        color: #6b7280;
+        line-height: 1.6;
+        margin-bottom: 1rem;
+      }
+
+      .service-price {
+        font-size: 1.5rem;
+        font-weight: 700;
+        color: #8b4513;
+      }
+
+      .barbers-section {
+        padding: 5rem 0;
+      }
+
+      .barbers-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 2rem;
+      }
+
+      .barber-card {
+        background: white;
+        border-radius: 15px;
+        overflow: hidden;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        transition: all 0.3s ease;
+        text-align: center;
+      }
+
+      .barber-card:hover {
+        transform: translateY(-10px);
+        box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+      }
+
+      .barber-image {
+        height: 250px;
+        overflow: hidden;
+      }
+
+      .barber-image img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        transition: transform 0.3s ease;
+      }
+
+      .barber-card:hover .barber-image img {
+        transform: scale(1.1);
+      }
+
+      .barber-info {
+        padding: 1.5rem;
+      }
+
+      .barber-name {
+        font-size: 1.25rem;
+        font-weight: 600;
+        margin-bottom: 0.5rem;
+        color: #1f2937;
+      }
+
+      .barber-specialty {
+        color: #8b4513;
+        font-weight: 500;
+        margin-bottom: 1rem;
+      }
+
+      .barber-experience {
+        color: #6b7280;
+        font-size: 0.875rem;
+      }
+
+      .gallery-section {
+        padding: 5rem 0;
+        background: #f8fafc;
+      }
+
+      .gallery-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        gap: 1rem;
+      }
+
+      .gallery-item {
+        position: relative;
+        border-radius: 10px;
+        overflow: hidden;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        transition: all 0.3s ease;
+      }
+
+      .gallery-item:hover {
+        transform: scale(1.05);
+        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+      }
+
+      .gallery-image {
+        height: 200px;
+        overflow: hidden;
+      }
+
+      .gallery-image img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        transition: transform 0.3s ease;
+      }
+
+      .gallery-item:hover .gallery-image img {
+        transform: scale(1.1);
+      }
+
+      .booking-section {
+        padding: 5rem 0;
+        background: linear-gradient(135deg, #8b4513 0%, #d2691e 100%);
+        color: white;
+      }
+
+      .booking-form {
+        background: rgba(255, 255, 255, 0.1);
+        backdrop-filter: blur(10px);
+        padding: 2rem;
+        border-radius: 15px;
+        border: 1px solid rgba(255, 255, 255, 0.2);
+      }
+
+      .booking-form input,
+      .booking-form select,
+      .booking-form textarea {
+        background: rgba(255, 255, 255, 0.9);
+        border: none;
+        color: #1f2937;
+      }
+
+      .booking-form input:focus,
+      .booking-form select:focus,
+      .booking-form textarea:focus {
+        background: white;
+        border-color: #8b4513;
+      }
+
+      .hours-section {
+        padding: 5rem 0;
+        background: #1f2937;
+        color: white;
+      }
+
+      .hours-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        gap: 2rem;
+      }
+
+      .hours-item {
+        text-align: center;
+        padding: 1.5rem;
+        background: rgba(255, 255, 255, 0.1);
+        border-radius: 10px;
+      }
+
+      .hours-item h4 {
+        margin-bottom: 0.5rem;
+        color: #f9fafb;
+      }
+
+      .back-btn {
+        position: fixed;
+        top: 100px;
+        left: 20px;
+        background: rgba(255, 255, 255, 0.9);
+        color: #8b4513;
+        padding: 10px 15px;
+        border-radius: 25px;
+        text-decoration: none;
+        font-weight: 600;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        transition: all 0.3s ease;
+        z-index: 1000;
+      }
+
+      .back-btn:hover {
+        background: #8b4513;
+        color: white;
+        transform: translateY(-2px);
+      }
+
+      .btn-primary {
+        background: #8b4513;
+      }
+
+      .btn-primary:hover {
+        background: #654321;
+        box-shadow: 0 10px 20px rgba(139, 69, 19, 0.3);
+      }
+
+      .section-title {
+        font-family: "Playfair Display", serif;
+      }
+
+      /* Disclaimer styles */
+      .disclaimer-banner {
+        background: linear-gradient(135deg, #8b4513 0%, #d2691e 100%);
+        color: white;
+        text-align: center;
+        padding: 1rem;
+        font-weight: 600;
+        position: relative;
+        z-index: 1001;
+      }
+
+      .disclaimer-banner i {
+        margin-right: 0.5rem;
+      }
+
+      @media (max-width: 768px) {
+        .hero-title {
+          font-size: 2.5rem;
+        }
+
+        .back-btn {
+          top: 80px;
+          left: 10px;
+          padding: 8px 12px;
+          font-size: 0.875rem;
+        }
+
+        .disclaimer-banner {
+          font-size: 0.875rem;
+          padding: 0.75rem;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Top Disclaimer Banner -->
+    <div class="disclaimer-banner">
+      <i class="fas fa-info-circle"></i>
+      This is a demonstration website created by Dan's Web Development to
+      showcase our portfolio. This is not a real barbershop.
+    </div>
+
+    <a href="index.html" class="back-btn">
+      <i class="fas fa-arrow-left"></i> Back to Portfolio
+    </a>
+
+    <!-- Hero Section -->
+    <section class="hero">
+      <div class="hero-container">
+        <div class="hero-content">
+          <h1 class="hero-title">Classic Cuts Barbershop</h1>
+          <p class="hero-subtitle">Where Style Meets Tradition</p>
+          <div class="hero-buttons">
+            <a href="#services" class="btn btn-primary">Our Services</a>
+            <a href="#booking" class="btn btn-secondary">Book Appointment</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="services-section">
+      <div class="container">
+        <h2 class="section-title">Our Services</h2>
+        <div class="services-grid">
+          <div class="service-card">
+            <div class="service-icon">
+              <i class="fas fa-cut"></i>
+            </div>
+            <h3>Classic Haircut</h3>
+            <p>
+              Traditional men's haircut with consultation and styling advice.
+            </p>
+            <div class="service-price">$25</div>
+          </div>
+
+          <div class="service-card">
+            <div class="service-icon">
+              <i class="fas fa-user-tie"></i>
+            </div>
+            <h3>Executive Cut</h3>
+            <p>
+              Premium haircut with hot towel treatment and detailed styling.
+            </p>
+            <div class="service-price">$35</div>
+          </div>
+
+          <div class="service-card">
+            <div class="service-icon">
+              <i class="fas fa-razor"></i>
+            </div>
+            <h3>Beard Trim</h3>
+            <p>Professional beard trimming and shaping with hot towel.</p>
+            <div class="service-price">$15</div>
+          </div>
+
+          <div class="service-card">
+            <div class="service-icon">
+              <i class="fas fa-spa"></i>
+            </div>
+            <h3>Haircut & Beard</h3>
+            <p>Complete grooming package including haircut and beard trim.</p>
+            <div class="service-price">$35</div>
+          </div>
+
+          <div class="service-card">
+            <div class="service-icon">
+              <i class="fas fa-child"></i>
+            </div>
+            <h3>Kids Haircut</h3>
+            <p>
+              Specialized haircuts for children with a gentle, patient approach.
+            </p>
+            <div class="service-price">$18</div>
+          </div>
+
+          <div class="service-card">
+            <div class="service-icon">
+              <i class="fas fa-palette"></i>
+            </div>
+            <h3>Hair Color</h3>
+            <p>Professional hair coloring and highlighting services.</p>
+            <div class="service-price">$45</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Barbers Section -->
+    <section class="barbers-section">
+      <div class="container">
+        <h2 class="section-title">Meet Our Barbers</h2>
+        <div class="barbers-grid">
+          <div class="barber-card">
+            <div class="barber-image">
+              <img
+                src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&auto=format&fit=crop&w=1470&q=80"
+                alt="Mike Johnson"
+              />
+            </div>
+            <div class="barber-info">
+              <h3 class="barber-name">Mike Johnson</h3>
+              <p class="barber-specialty">Master Barber</p>
+              <p class="barber-experience">
+                15+ years experience specializing in classic cuts and fades
+              </p>
+            </div>
+          </div>
+
+          <div class="barber-card">
+            <div class="barber-image">
+              <img
+                src="https://images.unsplash.com/photo-1494790108755-2616b612b786?ixlib=rb-4.0.3&auto=format&fit=crop&w=1470&q=80"
+                alt="Sarah Martinez"
+              />
+            </div>
+            <div class="barber-info">
+              <h3 class="barber-name">Sarah Martinez</h3>
+              <p class="barber-specialty">Style Specialist</p>
+              <p class="barber-experience">
+                Expert in modern cuts and creative styling
+              </p>
+            </div>
+          </div>
+
+          <div class="barber-card">
+            <div class="barber-image">
+              <img
+                src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?ixlib=rb-4.0.3&auto=format&fit=crop&w=1470&q=80"
+                alt="David Chen"
+              />
+            </div>
+            <div class="barber-info">
+              <h3 class="barber-name">David Chen</h3>
+              <p class="barber-specialty">Beard Expert</p>
+              <p class="barber-experience">
+                Specialized in beard grooming and maintenance
+              </p>
+            </div>
+          </div>
+
+          <div class="barber-card">
+            <div class="barber-image">
+              <img
+                src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?ixlib=rb-4.0.3&auto=format&fit=crop&w=1470&q=80"
+                alt="Emma Wilson"
+              />
+            </div>
+            <div class="barber-info">
+              <h3 class="barber-name">Emma Wilson</h3>
+              <p class="barber-specialty">Color Specialist</p>
+              <p class="barber-experience">
+                Expert in hair coloring and highlighting techniques
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Gallery Section -->
+    <section class="gallery-section">
+      <div class="container">
+        <h2 class="section-title">Our Work</h2>
+        <div class="gallery-grid">
+          <div class="gallery-item">
+            <div class="gallery-image">
+              <img
+                src="https://images.unsplash.com/photo-1503951914875-452162b0f3f1?ixlib=rb-4.0.3&auto=format&fit=crop&w=1470&q=80"
+                alt="Classic Cut"
+              />
+            </div>
+          </div>
+
+          <div class="gallery-item">
+            <div class="gallery-image">
+              <img
+                src="https://images.unsplash.com/photo-1599351431202-1e0f0137899a?ixlib=rb-4.0.3&auto=format&fit=crop&w=1470&q=80"
+                alt="Modern Fade"
+              />
+            </div>
+          </div>
+
+          <div class="gallery-item">
+            <div class="gallery-image">
+              <img
+                src="https://images.unsplash.com/photo-1622287162716-f311baa1a2b8?ixlib=rb-4.0.3&auto=format&fit=crop&w=1470&q=80"
+                alt="Beard Trim"
+              />
+            </div>
+          </div>
+
+          <div class="gallery-item">
+            <div class="gallery-image">
+              <img
+                src="https://images.unsplash.com/photo-1605497788044-5a32c7078486?ixlib=rb-4.0.3&auto=format&fit=crop&w=1470&q=80"
+                alt="Executive Style"
+              />
+            </div>
+          </div>
+
+          <div class="gallery-item">
+            <div class="gallery-image">
+              <img
+                src="https://images.unsplash.com/photo-1503951914875-452162b0f3f1?ixlib=rb-4.0.3&auto=format&fit=crop&w=1470&q=80"
+                alt="Kids Cut"
+              />
+            </div>
+          </div>
+
+          <div class="gallery-item">
+            <div class="gallery-image">
+              <img
+                src="https://images.unsplash.com/photo-1599351431202-1e0f0137899a?ixlib=rb-4.0.3&auto=format&fit=crop&w=1470&q=80"
+                alt="Color Work"
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Booking Section -->
+    <section id="booking" class="booking-section">
+      <div class="container">
+        <h2 class="section-title">Book Your Appointment</h2>
+        <div class="contact-content">
+          <div class="contact-info">
+            <h3>Schedule Your Visit</h3>
+            <p>
+              Book your appointment online or call us directly. Walk-ins are
+              welcome, but appointments are recommended to ensure availability.
+            </p>
+            <div class="contact-details">
+              <div class="contact-item">
+                <i class="fas fa-phone"></i>
+                <span>(555) 123-4567</span>
+              </div>
+              <div class="contact-item">
+                <i class="fas fa-envelope"></i>
+                <span>book@classiccuts.com</span>
+              </div>
+              <div class="contact-item">
+                <i class="fas fa-map-marker-alt"></i>
+                <span>456 Main Street, Downtown</span>
+              </div>
+              <div class="contact-item">
+                <i class="fas fa-clock"></i>
+                <span>Mon-Sat: 9AM-7PM, Sun: 10AM-5PM</span>
+              </div>
+            </div>
+          </div>
+          <form class="booking-form">
+            <div class="form-group">
+              <input type="text" placeholder="Your Name" required />
+            </div>
+            <div class="form-group">
+              <input type="email" placeholder="Your Email" required />
+            </div>
+            <div class="form-group">
+              <input type="tel" placeholder="Phone Number" required />
+            </div>
+            <div class="form-group">
+              <select required>
+                <option value="">Select Service</option>
+                <option value="classic">Classic Haircut</option>
+                <option value="executive">Executive Cut</option>
+                <option value="beard">Beard Trim</option>
+                <option value="combo">Haircut & Beard</option>
+                <option value="kids">Kids Haircut</option>
+                <option value="color">Hair Color</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <select required>
+                <option value="">Select Barber</option>
+                <option value="mike">Mike Johnson</option>
+                <option value="sarah">Sarah Martinez</option>
+                <option value="david">David Chen</option>
+                <option value="emma">Emma Wilson</option>
+                <option value="any">Any Available</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <input type="date" required />
+            </div>
+            <div class="form-group">
+              <select required>
+                <option value="">Select Time</option>
+                <option value="9:00">9:00 AM</option>
+                <option value="9:30">9:30 AM</option>
+                <option value="10:00">10:00 AM</option>
+                <option value="10:30">10:30 AM</option>
+                <option value="11:00">11:00 AM</option>
+                <option value="11:30">11:30 AM</option>
+                <option value="12:00">12:00 PM</option>
+                <option value="12:30">12:30 PM</option>
+                <option value="1:00">1:00 PM</option>
+                <option value="1:30">1:30 PM</option>
+                <option value="2:00">2:00 PM</option>
+                <option value="2:30">2:30 PM</option>
+                <option value="3:00">3:00 PM</option>
+                <option value="3:30">3:30 PM</option>
+                <option value="4:00">4:00 PM</option>
+                <option value="4:30">4:30 PM</option>
+                <option value="5:00">5:00 PM</option>
+                <option value="5:30">5:30 PM</option>
+                <option value="6:00">6:00 PM</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <textarea
+                placeholder="Special requests or notes..."
+                rows="3"
+              ></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary">
+              Book Appointment
+            </button>
+          </form>
+        </div>
+      </div>
+    </section>
+
+    <!-- Hours Section -->
+    <section class="hours-section">
+      <div class="container">
+        <h2 class="section-title">Hours of Operation</h2>
+        <div class="hours-grid">
+          <div class="hours-item">
+            <h4>Monday - Friday</h4>
+            <p>9:00 AM - 7:00 PM</p>
+          </div>
+          <div class="hours-item">
+            <h4>Saturday</h4>
+            <p>9:00 AM - 7:00 PM</p>
+          </div>
+          <div class="hours-item">
+            <h4>Sunday</h4>
+            <p>10:00 AM - 5:00 PM</p>
+          </div>
+          <div class="hours-item">
+            <h4>Walk-ins Welcome</h4>
+            <p>Appointments Recommended</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Bottom Disclaimer Banner -->
+    <div class="disclaimer-banner">
+      <i class="fas fa-info-circle"></i>
+      This is a demonstration website created by Dan's Web Development to
+      showcase our portfolio. This is not a real barbershop.
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>

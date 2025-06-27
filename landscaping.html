@@ -1,0 +1,584 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>
+      Green Thumb Landscaping - Professional Landscape Design & Maintenance
+    </title>
+    <link rel="stylesheet" href="styles.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+    />
+    <style>
+      /* Landscaping-specific styles */
+      .hero {
+        background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
+          url("https://images.unsplash.com/photo-1416879595882-3373a0480b5b?ixlib=rb-4.0.3&auto=format&fit=crop&w=1470&q=80");
+        background-size: cover;
+        background-position: center;
+        background-attachment: fixed;
+      }
+
+      .services-section {
+        padding: 5rem 0;
+        background: #f8fafc;
+      }
+
+      .service-item {
+        background: white;
+        border-radius: 15px;
+        padding: 2rem;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        transition: all 0.3s ease;
+        text-align: center;
+        margin-bottom: 2rem;
+      }
+
+      .service-item:hover {
+        transform: translateY(-10px);
+        box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+      }
+
+      .service-icon {
+        width: 80px;
+        height: 80px;
+        background: linear-gradient(135deg, #059669 0%, #10b981 100%);
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin: 0 auto 1rem;
+      }
+
+      .service-icon i {
+        font-size: 2rem;
+        color: white;
+      }
+
+      .service-item h3 {
+        font-size: 1.5rem;
+        margin-bottom: 1rem;
+        color: #1f2937;
+      }
+
+      .service-item p {
+        color: #6b7280;
+        line-height: 1.6;
+      }
+
+      .gallery-section {
+        padding: 5rem 0;
+      }
+
+      .gallery-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        gap: 2rem;
+      }
+
+      .gallery-item {
+        position: relative;
+        border-radius: 15px;
+        overflow: hidden;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        transition: all 0.3s ease;
+      }
+
+      .gallery-item:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+      }
+
+      .gallery-image {
+        height: 250px;
+        overflow: hidden;
+      }
+
+      .gallery-image img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        transition: transform 0.3s ease;
+      }
+
+      .gallery-item:hover .gallery-image img {
+        transform: scale(1.1);
+      }
+
+      .gallery-overlay {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        background: linear-gradient(transparent, rgba(0, 0, 0, 0.8));
+        color: white;
+        padding: 1.5rem;
+      }
+
+      .gallery-overlay h3 {
+        font-size: 1.25rem;
+        margin-bottom: 0.5rem;
+      }
+
+      .gallery-overlay p {
+        opacity: 0.9;
+        font-size: 0.875rem;
+      }
+
+      .stats-section {
+        padding: 5rem 0;
+        background: linear-gradient(135deg, #059669 0%, #10b981 100%);
+        color: white;
+      }
+
+      .stats-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        gap: 2rem;
+        text-align: center;
+      }
+
+      .stat-item h3 {
+        font-size: 3rem;
+        font-weight: 700;
+        margin-bottom: 0.5rem;
+      }
+
+      .stat-item p {
+        font-size: 1.1rem;
+        opacity: 0.9;
+      }
+
+      .testimonials-section {
+        padding: 5rem 0;
+        background: #f8fafc;
+      }
+
+      .testimonial-item {
+        background: white;
+        padding: 2rem;
+        border-radius: 15px;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        margin-bottom: 2rem;
+        position: relative;
+      }
+
+      .testimonial-item::before {
+        content: '"';
+        font-size: 4rem;
+        color: #10b981;
+        position: absolute;
+        top: -10px;
+        left: 20px;
+        font-family: serif;
+      }
+
+      .testimonial-text {
+        font-style: italic;
+        margin-bottom: 1rem;
+        color: #6b7280;
+        line-height: 1.6;
+      }
+
+      .testimonial-author {
+        font-weight: 600;
+        color: #1f2937;
+      }
+
+      .back-btn {
+        position: fixed;
+        top: 100px;
+        left: 20px;
+        background: rgba(255, 255, 255, 0.9);
+        color: #059669;
+        padding: 10px 15px;
+        border-radius: 25px;
+        text-decoration: none;
+        font-weight: 600;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        transition: all 0.3s ease;
+        z-index: 1000;
+      }
+
+      .back-btn:hover {
+        background: #059669;
+        color: white;
+        transform: translateY(-2px);
+      }
+
+      .btn-primary {
+        background: #059669;
+      }
+
+      .btn-primary:hover {
+        background: #047857;
+        box-shadow: 0 10px 20px rgba(5, 150, 105, 0.3);
+      }
+
+      @media (max-width: 768px) {
+        .back-btn {
+          top: 80px;
+          left: 10px;
+          padding: 8px 12px;
+          font-size: 0.875rem;
+        }
+      }
+
+      /* Disclaimer styles */
+      .disclaimer-banner {
+        background: linear-gradient(135deg, #059669 0%, #10b981 100%);
+        color: white;
+        text-align: center;
+        padding: 1rem;
+        font-weight: 600;
+        position: relative;
+        z-index: 1001;
+      }
+
+      .disclaimer-banner i {
+        margin-right: 0.5rem;
+      }
+
+      @media (max-width: 768px) {
+        .disclaimer-banner {
+          font-size: 0.875rem;
+          padding: 0.75rem;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Top Disclaimer Banner -->
+    <div class="disclaimer-banner">
+      <i class="fas fa-info-circle"></i>
+      This is a demonstration website created by Dan's Web Development to
+      showcase our portfolio. This is not a real landscaping company.
+    </div>
+
+    <a href="index.html" class="back-btn">
+      <i class="fas fa-arrow-left"></i> Back to Portfolio
+    </a>
+
+    <!-- Hero Section -->
+    <section class="hero">
+      <div class="hero-container">
+        <div class="hero-content">
+          <h1 class="hero-title">Green Thumb Landscaping</h1>
+          <p class="hero-subtitle">
+            Transforming outdoor spaces into beautiful, sustainable landscapes
+          </p>
+          <div class="hero-buttons">
+            <a href="#services" class="btn btn-primary">Our Services</a>
+            <a href="#contact" class="btn btn-secondary">Get Free Quote</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="services-section">
+      <div class="container">
+        <h2 class="section-title">Our Services</h2>
+        <div class="services-grid">
+          <div class="service-item">
+            <div class="service-icon">
+              <i class="fas fa-seedling"></i>
+            </div>
+            <h3>Landscape Design</h3>
+            <p>
+              Custom landscape design that transforms your outdoor space into a
+              beautiful, functional environment tailored to your lifestyle and
+              preferences.
+            </p>
+          </div>
+
+          <div class="service-item">
+            <div class="service-icon">
+              <i class="fas fa-tree"></i>
+            </div>
+            <h3>Tree & Shrub Care</h3>
+            <p>
+              Professional tree trimming, pruning, and maintenance services to
+              keep your trees healthy and beautiful year-round.
+            </p>
+          </div>
+
+          <div class="service-item">
+            <div class="service-icon">
+              <i class="fas fa-leaf"></i>
+            </div>
+            <h3>Lawn Maintenance</h3>
+            <p>
+              Comprehensive lawn care including mowing, edging, fertilization,
+              and weed control to maintain a lush, green lawn.
+            </p>
+          </div>
+
+          <div class="service-item">
+            <div class="service-icon">
+              <i class="fas fa-tint"></i>
+            </div>
+            <h3>Irrigation Systems</h3>
+            <p>
+              Design, installation, and maintenance of efficient irrigation
+              systems to keep your landscape healthy and water-efficient.
+            </p>
+          </div>
+
+          <div class="service-item">
+            <div class="service-icon">
+              <i class="fas fa-mountain"></i>
+            </div>
+            <h3>Hardscaping</h3>
+            <p>
+              Patios, walkways, retaining walls, and other hardscape features to
+              enhance your outdoor living space.
+            </p>
+          </div>
+
+          <div class="service-item">
+            <div class="service-icon">
+              <i class="fas fa-snowflake"></i>
+            </div>
+            <h3>Seasonal Cleanup</h3>
+            <p>
+              Spring and fall cleanup services including leaf removal, garden
+              preparation, and seasonal maintenance.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Gallery Section -->
+    <section class="gallery-section">
+      <div class="container">
+        <h2 class="section-title">Our Work</h2>
+        <div class="gallery-grid">
+          <div class="gallery-item">
+            <div class="gallery-image">
+              <img
+                src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?ixlib=rb-4.0.3&auto=format&fit=crop&w=1470&q=80"
+                alt="Modern Garden Design"
+              />
+            </div>
+            <div class="gallery-overlay">
+              <h3>Modern Garden Design</h3>
+              <p>
+                Contemporary landscape with clean lines and sustainable plants
+              </p>
+            </div>
+          </div>
+
+          <div class="gallery-item">
+            <div class="gallery-image">
+              <img
+                src="https://images.unsplash.com/photo-1585320806297-9794b3e4eeae?ixlib=rb-4.0.3&auto=format&fit=crop&w=1470&q=80"
+                alt="Outdoor Living Space"
+              />
+            </div>
+            <div class="gallery-overlay">
+              <h3>Outdoor Living Space</h3>
+              <p>Complete outdoor kitchen and entertainment area</p>
+            </div>
+          </div>
+
+          <div class="gallery-item">
+            <div class="gallery-image">
+              <img
+                src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?ixlib=rb-4.0.3&auto=format&fit=crop&w=1470&q=80"
+                alt="Water Feature"
+              />
+            </div>
+            <div class="gallery-overlay">
+              <h3>Water Feature Installation</h3>
+              <p>Custom pond and waterfall design</p>
+            </div>
+          </div>
+
+          <div class="gallery-item">
+            <div class="gallery-image">
+              <img
+                src="https://images.unsplash.com/photo-1585320806297-9794b3e4eeae?ixlib=rb-4.0.3&auto=format&fit=crop&w=1470&q=80"
+                alt="Garden Maintenance"
+              />
+            </div>
+            <div class="gallery-overlay">
+              <h3>Garden Maintenance</h3>
+              <p>Regular maintenance keeps your garden looking its best</p>
+            </div>
+          </div>
+
+          <div class="gallery-item">
+            <div class="gallery-image">
+              <img
+                src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?ixlib=rb-4.0.3&auto=format&fit=crop&w=1470&q=80"
+                alt="Tree Care"
+              />
+            </div>
+            <div class="gallery-overlay">
+              <h3>Tree Care Services</h3>
+              <p>Professional tree trimming and maintenance</p>
+            </div>
+          </div>
+
+          <div class="gallery-item">
+            <div class="gallery-image">
+              <img
+                src="https://images.unsplash.com/photo-1585320806297-9794b3e4eeae?ixlib=rb-4.0.3&auto=format&fit=crop&w=1470&q=80"
+                alt="Irrigation System"
+              />
+            </div>
+            <div class="gallery-overlay">
+              <h3>Irrigation Installation</h3>
+              <p>Smart irrigation systems for water efficiency</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Stats Section -->
+    <section class="stats-section">
+      <div class="container">
+        <div class="stats-grid">
+          <div class="stat-item">
+            <h3>500+</h3>
+            <p>Happy Customers</p>
+          </div>
+          <div class="stat-item">
+            <h3>15</h3>
+            <p>Years Experience</p>
+          </div>
+          <div class="stat-item">
+            <h3>1000+</h3>
+            <p>Projects Completed</p>
+          </div>
+          <div class="stat-item">
+            <h3>24/7</h3>
+            <p>Customer Support</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="testimonials-section">
+      <div class="container">
+        <h2 class="section-title">What Our Customers Say</h2>
+        <div class="services-grid">
+          <div class="testimonial-item">
+            <p class="testimonial-text">
+              "Green Thumb transformed our backyard into a beautiful outdoor
+              living space. Their attention to detail and professional service
+              exceeded our expectations."
+            </p>
+            <div class="testimonial-author">- Sarah Johnson, Homeowner</div>
+          </div>
+
+          <div class="testimonial-item">
+            <p class="testimonial-text">
+              "The team at Green Thumb is reliable, professional, and truly
+              passionate about landscaping. They've been maintaining our
+              property for 5 years and we couldn't be happier."
+            </p>
+            <div class="testimonial-author">- Michael Chen, Business Owner</div>
+          </div>
+
+          <div class="testimonial-item">
+            <p class="testimonial-text">
+              "From design to installation, Green Thumb made the entire process
+              smooth and enjoyable. Our new landscape has increased our property
+              value significantly."
+            </p>
+            <div class="testimonial-author">
+              - Lisa Rodriguez, Property Manager
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+      <div class="container">
+        <h2 class="section-title">Get Your Free Quote</h2>
+        <div class="contact-content">
+          <div class="contact-info">
+            <h3>Ready to Transform Your Landscape?</h3>
+            <p>
+              Contact us today for a free consultation and quote. Our
+              experienced team will work with you to create the perfect outdoor
+              space for your home or business.
+            </p>
+            <div class="contact-details">
+              <div class="contact-item">
+                <i class="fas fa-phone"></i>
+                <span>(555) 123-4567</span>
+              </div>
+              <div class="contact-item">
+                <i class="fas fa-envelope"></i>
+                <span>info@greenthumb.com</span>
+              </div>
+              <div class="contact-item">
+                <i class="fas fa-map-marker-alt"></i>
+                <span>Serving the Greater Metro Area</span>
+              </div>
+              <div class="contact-item">
+                <i class="fas fa-clock"></i>
+                <span>Mon-Fri: 7AM-6PM, Sat: 8AM-4PM</span>
+              </div>
+            </div>
+          </div>
+          <form class="contact-form">
+            <div class="form-group">
+              <input type="text" placeholder="Your Name" required />
+            </div>
+            <div class="form-group">
+              <input type="email" placeholder="Your Email" required />
+            </div>
+            <div class="form-group">
+              <input type="tel" placeholder="Phone Number" required />
+            </div>
+            <div class="form-group">
+              <select required>
+                <option value="">Select Service</option>
+                <option value="design">Landscape Design</option>
+                <option value="maintenance">Lawn Maintenance</option>
+                <option value="tree-care">Tree & Shrub Care</option>
+                <option value="irrigation">Irrigation Systems</option>
+                <option value="hardscaping">Hardscaping</option>
+                <option value="cleanup">Seasonal Cleanup</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <textarea
+                placeholder="Tell us about your project..."
+                rows="5"
+                required
+              ></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary">
+              Get Free Quote
+            </button>
+          </form>
+        </div>
+      </div>
+    </section>
+
+    <!-- Bottom Disclaimer Banner -->
+    <div class="disclaimer-banner">
+      <i class="fas fa-info-circle"></i>
+      This is a demonstration website created by Dan's Web Development to
+      showcase our portfolio. This is not a real landscaping company.
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>

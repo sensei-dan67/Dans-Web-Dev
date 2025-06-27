@@ -1,0 +1,577 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- Primary Meta Tags -->
+    <title>
+      Dan's Web Development - Professional Website Solutions | Custom Web Design
+      & Development
+    </title>
+    <meta
+      name="title"
+      content="Dan's Web Development - Professional Website Solutions | Custom Web Design & Development"
+    />
+    <meta
+      name="description"
+      content="Professional web development services in [Your City]. Custom websites, e-commerce solutions, and responsive design. Get a free quote for your business website today!"
+    />
+    <meta
+      name="keywords"
+      content="web development, website design, custom websites, e-commerce, responsive design, SEO optimization, business websites, professional web developer"
+    />
+    <meta name="author" content="Dan's Web Development" />
+    <meta name="robots" content="index, follow" />
+    <meta name="language" content="English" />
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://your-vercel-domain.vercel.app/" />
+    <meta
+      property="og:title"
+      content="Dan's Web Development - Professional Website Solutions"
+    />
+    <meta
+      property="og:description"
+      content="Professional web development services. Custom websites, e-commerce solutions, and responsive design. Get a free quote today!"
+    />
+    <meta
+      property="og:image"
+      content="https://your-vercel-domain.vercel.app/images/og-image.jpg"
+    />
+    <meta property="og:site_name" content="Dan's Web Development" />
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image" />
+    <meta
+      property="twitter:url"
+      content="https://your-vercel-domain.vercel.app/"
+    />
+    <meta
+      property="twitter:title"
+      content="Dan's Web Development - Professional Website Solutions"
+    />
+    <meta
+      property="twitter:description"
+      content="Professional web development services. Custom websites, e-commerce solutions, and responsive design. Get a free quote today!"
+    />
+    <meta
+      property="twitter:image"
+      content="https://your-vercel-domain.vercel.app/images/twitter-image.jpg"
+    />
+
+    <!-- Additional SEO Meta Tags -->
+    <meta name="theme-color" content="#2563eb" />
+    <meta name="msapplication-TileColor" content="#2563eb" />
+    <link rel="canonical" href="https://your-vercel-domain.vercel.app/" />
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="/favicon.ico" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
+
+    <!-- Preload Critical Resources -->
+    <link rel="preload" href="styles.css" as="style" />
+    <link
+      rel="preload"
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap"
+      as="style"
+    />
+
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="styles.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+    />
+
+    <!-- Structured Data -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "LocalBusiness",
+        "name": "Dan's Web Development",
+        "description": "Professional web development services offering custom websites, e-commerce solutions, and responsive design",
+        "url": "https://your-vercel-domain.vercel.app",
+        "logo": "https://your-vercel-domain.vercel.app/images/logo.png",
+        "image": "https://your-vercel-domain.vercel.app/images/hero-image.jpg",
+        "telephone": "+1-XXX-XXX-XXXX",
+        "email": "danielitoaramos@gmail.com",
+        "address": {
+          "@type": "PostalAddress",
+          "addressCountry": "US"
+        },
+        "openingHours": "Mo,We,Fr,Su 09:00-18:00",
+        "priceRange": "$$",
+        "serviceArea": {
+          "@type": "GeoCircle",
+          "geoMidpoint": {
+            "@type": "GeoCoordinates",
+            "latitude": "40.7128",
+            "longitude": "-74.0060"
+          },
+          "geoRadius": "50000"
+        },
+        "hasOfferCatalog": {
+          "@type": "OfferCatalog",
+          "name": "Web Development Services",
+          "itemListElement": [
+            {
+              "@type": "Offer",
+              "itemOffered": {
+                "@type": "Service",
+                "name": "Single Page Website",
+                "description": "Perfect for small businesses and personal brands",
+                "price": "299",
+                "priceCurrency": "USD"
+              }
+            },
+            {
+              "@type": "Offer",
+              "itemOffered": {
+                "@type": "Service",
+                "name": "Multi-Page Website",
+                "description": "Comprehensive websites with multiple pages",
+                "price": "599",
+                "priceCurrency": "USD"
+              }
+            },
+            {
+              "@type": "Offer",
+              "itemOffered": {
+                "@type": "Service",
+                "name": "E-Commerce Solution",
+                "description": "Online stores with product catalogs and payment processing",
+                "price": "999",
+                "priceCurrency": "USD"
+              }
+            }
+          ]
+        },
+        "sameAs": [
+          "https://www.linkedin.com/in/danswebdevelopment",
+          "https://github.com/danswebdevelopment"
+        ]
+      }
+    </script>
+  </head>
+  <body>
+    <!-- Navigation -->
+    <nav class="navbar" role="navigation" aria-label="Main navigation">
+      <div class="nav-container">
+        <div class="nav-logo">
+          <h1>Dan's Web Dev</h1>
+        </div>
+        <ul class="nav-menu" role="menubar">
+          <li class="nav-item" role="none">
+            <a href="#home" class="nav-link" role="menuitem">Home</a>
+          </li>
+          <li class="nav-item" role="none">
+            <a href="#services" class="nav-link" role="menuitem">Services</a>
+          </li>
+          <li class="nav-item" role="none">
+            <a href="#pricing" class="nav-link" role="menuitem">Pricing</a>
+          </li>
+          <li class="nav-item" role="none">
+            <a href="#portfolio" class="nav-link" role="menuitem">Portfolio</a>
+          </li>
+          <li class="nav-item" role="none">
+            <a href="#contact" class="nav-link" role="menuitem">Contact</a>
+          </li>
+        </ul>
+        <div
+          class="hamburger"
+          aria-label="Toggle navigation menu"
+          aria-expanded="false"
+          aria-controls="nav-menu"
+        >
+          <span class="bar"></span>
+          <span class="bar"></span>
+          <span class="bar"></span>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero" role="banner">
+      <div class="hero-container">
+        <div class="hero-content">
+          <h2 class="hero-title">Professional Website Development</h2>
+          <p class="hero-subtitle">
+            Creating stunning, responsive websites that drive results for your
+            business
+          </p>
+          <div class="hero-buttons">
+            <a
+              href="#portfolio"
+              class="btn btn-primary"
+              aria-label="View our portfolio of work"
+              >View Portfolio</a
+            >
+            <a
+              href="#contact"
+              class="btn btn-secondary"
+              aria-label="Get a free quote for your website"
+              >Get Quote</a
+            >
+          </div>
+        </div>
+        <div class="hero-image" aria-hidden="true">
+          <div class="floating-card">
+            <i class="fas fa-code" aria-hidden="true"></i>
+            <h3>Clean Code</h3>
+          </div>
+          <div class="floating-card">
+            <i class="fas fa-mobile-alt" aria-hidden="true"></i>
+            <h3>Responsive Design</h3>
+          </div>
+          <div class="floating-card">
+            <i class="fas fa-rocket" aria-hidden="true"></i>
+            <h3>Fast Performance</h3>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Services Section -->
+    <section
+      id="services"
+      class="services"
+      role="region"
+      aria-labelledby="services-title"
+    >
+      <div class="container">
+        <h2 id="services-title" class="section-title">Our Services</h2>
+        <div class="services-grid">
+          <article class="service-card">
+            <div class="service-icon">
+              <i class="fas fa-file-alt" aria-hidden="true"></i>
+            </div>
+            <h3>Single Page Websites</h3>
+            <p>
+              Perfect for small businesses and personal brands. Clean, focused
+              design that converts visitors into customers.
+            </p>
+          </article>
+          <article class="service-card">
+            <div class="service-icon">
+              <i class="fas fa-sitemap" aria-hidden="true"></i>
+            </div>
+            <h3>Multi-Page Websites</h3>
+            <p>
+              Comprehensive websites with multiple pages to showcase your
+              business, services, and portfolio.
+            </p>
+          </article>
+          <article class="service-card">
+            <div class="service-icon">
+              <i class="fas fa-shopping-cart" aria-hidden="true"></i>
+            </div>
+            <h3>E-Commerce Solutions</h3>
+            <p>
+              Online stores with product catalogs, secure payment processing,
+              and inventory management.
+            </p>
+          </article>
+          <article class="service-card">
+            <div class="service-icon">
+              <i class="fas fa-magic" aria-hidden="true"></i>
+            </div>
+            <h3>Custom Animations</h3>
+            <p>
+              Interactive animations and effects that enhance user experience
+              and make your website stand out.
+            </p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Pricing Section -->
+    <section
+      id="pricing"
+      class="pricing"
+      role="region"
+      aria-labelledby="pricing-title"
+    >
+      <div class="container">
+        <h2 id="pricing-title" class="section-title">Pricing Plans</h2>
+        <div class="pricing-grid">
+          <article class="pricing-card">
+            <div class="pricing-header">
+              <h3>Single Page</h3>
+              <div class="price">$299</div>
+            </div>
+            <ul class="pricing-features">
+              <li>
+                <i class="fas fa-check" aria-hidden="true"></i> Responsive
+                Design
+              </li>
+              <li>
+                <i class="fas fa-check" aria-hidden="true"></i> Contact Form
+              </li>
+              <li>
+                <i class="fas fa-check" aria-hidden="true"></i> SEO Optimization
+              </li>
+              <li>
+                <i class="fas fa-check" aria-hidden="true"></i> Social Media
+                Integration
+              </li>
+              <li>
+                <i class="fas fa-check" aria-hidden="true"></i> 1 Month Support
+              </li>
+            </ul>
+            <div class="pricing-addons">
+              <h4>Add-ons:</h4>
+              <ul>
+                <li>Hover Effects: +$50</li>
+                <li>Scroll Animations: +$75</li>
+                <li>Advanced Interactions: +$100</li>
+              </ul>
+            </div>
+            <a
+              href="#contact"
+              class="btn btn-primary"
+              aria-label="Get started with single page website"
+              >Get Started</a
+            >
+          </article>
+
+          <article class="pricing-card featured">
+            <div class="pricing-badge">Most Popular</div>
+            <div class="pricing-header">
+              <h3>Multi-Page</h3>
+              <div class="price">$599</div>
+            </div>
+            <ul class="pricing-features">
+              <li>
+                <i class="fas fa-check" aria-hidden="true"></i> Up to 5 Pages
+              </li>
+              <li>
+                <i class="fas fa-check" aria-hidden="true"></i> Responsive
+                Design
+              </li>
+              <li>
+                <i class="fas fa-check" aria-hidden="true"></i> Contact Form
+              </li>
+              <li>
+                <i class="fas fa-check" aria-hidden="true"></i> SEO Optimization
+              </li>
+              <li>
+                <i class="fas fa-check" aria-hidden="true"></i> Blog Section
+              </li>
+              <li>
+                <i class="fas fa-check" aria-hidden="true"></i> 3 Months Support
+              </li>
+            </ul>
+            <div class="pricing-addons">
+              <h4>Add-ons:</h4>
+              <ul>
+                <li>Hover Effects: +$75</li>
+                <li>Scroll Animations: +$100</li>
+                <li>Advanced Interactions: +$150</li>
+              </ul>
+            </div>
+            <a
+              href="#contact"
+              class="btn btn-primary"
+              aria-label="Get started with multi-page website"
+              >Get Started</a
+            >
+          </article>
+
+          <article class="pricing-card">
+            <div class="pricing-header">
+              <h3>E-Commerce</h3>
+              <div class="price">$999</div>
+            </div>
+            <ul class="pricing-features">
+              <li>
+                <i class="fas fa-check" aria-hidden="true"></i> Product Catalog
+              </li>
+              <li>
+                <i class="fas fa-check" aria-hidden="true"></i> Shopping Cart
+              </li>
+              <li>
+                <i class="fas fa-check" aria-hidden="true"></i> Payment
+                Integration
+              </li>
+              <li>
+                <i class="fas fa-check" aria-hidden="true"></i> Inventory
+                Management
+              </li>
+              <li>
+                <i class="fas fa-check" aria-hidden="true"></i> Order Tracking
+              </li>
+              <li>
+                <i class="fas fa-check" aria-hidden="true"></i> 6 Months Support
+              </li>
+            </ul>
+            <div class="pricing-addons">
+              <h4>Add-ons:</h4>
+              <ul>
+                <li>Hover Effects: +$100</li>
+                <li>Scroll Animations: +$150</li>
+                <li>Advanced Interactions: +$200</li>
+              </ul>
+            </div>
+            <a
+              href="#contact"
+              class="btn btn-primary"
+              aria-label="Get started with e-commerce website"
+              >Get Started</a
+            >
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Portfolio Section -->
+    <section
+      id="portfolio"
+      class="portfolio"
+      role="region"
+      aria-labelledby="portfolio-title"
+    >
+      <div class="container">
+        <h2 id="portfolio-title" class="section-title">Our Work</h2>
+        <div class="portfolio-grid">
+          <article class="portfolio-item">
+            <div class="portfolio-image">
+              <img
+                src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80"
+                alt="Bella Vista Ristorante - Elegant Italian restaurant website with online reservations"
+                loading="lazy"
+                width="400"
+                height="300"
+              />
+              <div class="portfolio-overlay">
+                <h3>Bella Vista Ristorante</h3>
+                <p>
+                  Elegant Italian restaurant website with online reservations
+                </p>
+                <a href="italian-restaurant.html" class="btn btn-secondary"
+                  >View Project</a
+                >
+              </div>
+            </div>
+          </article>
+          <article class="portfolio-item">
+            <div class="portfolio-image">
+              <img
+                src="https://images.unsplash.com/photo-1416879595882-3373a0480b5b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80"
+                alt="Green Thumb Landscaping - Professional landscaping company with service showcase"
+                loading="lazy"
+                width="400"
+                height="300"
+              />
+              <div class="portfolio-overlay">
+                <h3>Green Thumb Landscaping</h3>
+                <p>Professional landscaping company with service showcase</p>
+                <a href="landscaping.html" class="btn btn-secondary"
+                  >View Project</a
+                >
+              </div>
+            </div>
+          </article>
+          <article class="portfolio-item">
+            <div class="portfolio-image">
+              <img
+                src="https://images.unsplash.com/photo-1585747860715-2ba37e788b70?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80"
+                alt="Classic Cuts Barbershop - Modern barbershop with online booking system"
+                loading="lazy"
+                width="400"
+                height="300"
+              />
+              <div class="portfolio-overlay">
+                <h3>Classic Cuts Barbershop</h3>
+                <p>Modern barbershop with online booking system</p>
+                <a href="barbershop.html" class="btn btn-secondary"
+                  >View Project</a
+                >
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section
+      id="contact"
+      class="contact"
+      role="region"
+      aria-labelledby="contact-title"
+    >
+      <div class="container">
+        <h2 id="contact-title" class="section-title">Get In Touch</h2>
+        <div class="contact-content">
+          <div class="contact-info">
+            <h3>Ready to start your project?</h3>
+            <p>
+              Let's discuss how I can help bring your vision to life with a
+              professional website that drives results.
+            </p>
+            <div class="contact-details">
+              <div class="contact-item">
+                <i class="fas fa-envelope" aria-hidden="true"></i>
+                <a href="mailto:danielitoaramos@gmail.com"
+                  >danielitoaramos@gmail.com</a
+                >
+              </div>
+              <div class="contact-item">
+                <i class="fas fa-clock" aria-hidden="true"></i>
+                <span>Mon, Wed, Fri, Sun: 9AM-6PM</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer" role="contentinfo">
+      <div class="container">
+        <div class="footer-content">
+          <div class="footer-section">
+            <h3>Dan's Web Development</h3>
+            <p>
+              Creating professional websites that help businesses grow and
+              succeed online.
+            </p>
+          </div>
+          <div class="footer-section">
+            <h4>Services</h4>
+            <ul>
+              <li><a href="#services">Single Page Websites</a></li>
+              <li><a href="#services">Multi-Page Websites</a></li>
+              <li><a href="#services">E-Commerce Solutions</a></li>
+              <li><a href="#services">Custom Animations</a></li>
+            </ul>
+          </div>
+          <div class="footer-section">
+            <h4>Contact</h4>
+            <ul>
+              <li>
+                <a href="mailto:danielitoaramos@gmail.com"
+                  >danielitoaramos@gmail.com</a
+                >
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="footer-bottom">
+          <p>&copy; 2025 Dan's Web Development. All rights reserved.</p>
+        </div>
+      </div>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>

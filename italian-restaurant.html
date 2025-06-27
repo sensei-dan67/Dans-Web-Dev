@@ -1,0 +1,539 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Bella Vista Ristorante - Authentic Italian Cuisine</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&family=Inter:wght@300;400;500;600&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+    />
+    <style>
+      /* Restaurant-specific styles */
+      body {
+        font-family: "Inter", sans-serif;
+      }
+
+      .hero {
+        background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+          url("https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?ixlib=rb-4.0.3&auto=format&fit=crop&w=1470&q=80");
+        background-size: cover;
+        background-position: center;
+        background-attachment: fixed;
+      }
+
+      .hero-title {
+        font-family: "Playfair Display", serif;
+        font-size: 4rem;
+        font-weight: 900;
+      }
+
+      .hero-subtitle {
+        font-family: "Playfair Display", serif;
+        font-size: 1.5rem;
+        font-style: italic;
+      }
+
+      .section-title {
+        font-family: "Playfair Display", serif;
+      }
+
+      .menu-section {
+        padding: 5rem 0;
+        background: #f8fafc;
+      }
+
+      .menu-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        gap: 2rem;
+      }
+
+      .menu-item {
+        background: white;
+        border-radius: 15px;
+        overflow: hidden;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        transition: all 0.3s ease;
+      }
+
+      .menu-item:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+      }
+
+      .menu-image {
+        height: 200px;
+        overflow: hidden;
+      }
+
+      .menu-image img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        transition: transform 0.3s ease;
+      }
+
+      .menu-item:hover .menu-image img {
+        transform: scale(1.1);
+      }
+
+      .menu-content {
+        padding: 1.5rem;
+      }
+
+      .menu-title {
+        font-family: "Playfair Display", serif;
+        font-size: 1.5rem;
+        margin-bottom: 0.5rem;
+        color: #1f2937;
+      }
+
+      .menu-description {
+        color: #6b7280;
+        margin-bottom: 1rem;
+        line-height: 1.6;
+      }
+
+      .menu-price {
+        font-size: 1.25rem;
+        font-weight: 600;
+        color: #dc2626;
+      }
+
+      .about-section {
+        padding: 5rem 0;
+      }
+
+      .about-content {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 4rem;
+        align-items: center;
+      }
+
+      .about-image {
+        border-radius: 15px;
+        overflow: hidden;
+        box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+      }
+
+      .about-image img {
+        width: 100%;
+        height: 400px;
+        object-fit: cover;
+      }
+
+      .about-text h3 {
+        font-family: "Playfair Display", serif;
+        font-size: 2.5rem;
+        margin-bottom: 1rem;
+        color: #1f2937;
+      }
+
+      .about-text p {
+        color: #6b7280;
+        line-height: 1.8;
+        margin-bottom: 1.5rem;
+      }
+
+      .reservation-section {
+        padding: 5rem 0;
+        background: linear-gradient(135deg, #dc2626 0%, #991b1b 100%);
+        color: white;
+      }
+
+      .reservation-form {
+        background: rgba(255, 255, 255, 0.1);
+        backdrop-filter: blur(10px);
+        padding: 2rem;
+        border-radius: 15px;
+        border: 1px solid rgba(255, 255, 255, 0.2);
+      }
+
+      .reservation-form input,
+      .reservation-form select,
+      .reservation-form textarea {
+        background: rgba(255, 255, 255, 0.9);
+        border: none;
+        color: #1f2937;
+      }
+
+      .reservation-form input:focus,
+      .reservation-form select:focus,
+      .reservation-form textarea:focus {
+        background: white;
+        border-color: #dc2626;
+      }
+
+      .hours-section {
+        padding: 5rem 0;
+        background: #1f2937;
+        color: white;
+      }
+
+      .hours-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        gap: 2rem;
+      }
+
+      .hours-item {
+        text-align: center;
+        padding: 1.5rem;
+        background: rgba(255, 255, 255, 0.1);
+        border-radius: 10px;
+      }
+
+      .hours-item h4 {
+        font-family: "Playfair Display", serif;
+        margin-bottom: 0.5rem;
+      }
+
+      .back-btn {
+        position: fixed;
+        top: 100px;
+        left: 20px;
+        background: rgba(255, 255, 255, 0.9);
+        color: #2563eb;
+        padding: 10px 15px;
+        border-radius: 25px;
+        text-decoration: none;
+        font-weight: 600;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        transition: all 0.3s ease;
+        z-index: 1000;
+      }
+
+      .back-btn:hover {
+        background: #2563eb;
+        color: white;
+        transform: translateY(-2px);
+      }
+
+      /* Disclaimer styles */
+      .disclaimer-banner {
+        background: linear-gradient(135deg, #dc2626 0%, #991b1b 100%);
+        color: white;
+        text-align: center;
+        padding: 1rem;
+        font-weight: 600;
+        position: relative;
+        z-index: 1001;
+      }
+
+      .disclaimer-banner i {
+        margin-right: 0.5rem;
+      }
+
+      @media (max-width: 768px) {
+        .hero-title {
+          font-size: 2.5rem;
+        }
+
+        .about-content {
+          grid-template-columns: 1fr;
+        }
+
+        .back-btn {
+          top: 80px;
+          left: 10px;
+          padding: 8px 12px;
+          font-size: 0.875rem;
+        }
+
+        .disclaimer-banner {
+          font-size: 0.875rem;
+          padding: 0.75rem;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Top Disclaimer Banner -->
+    <div class="disclaimer-banner">
+      <i class="fas fa-info-circle"></i>
+      This is a demonstration website created by Dan's Web Development to
+      showcase our portfolio. This is not a real restaurant.
+    </div>
+
+    <a href="index.html" class="back-btn">
+      <i class="fas fa-arrow-left"></i> Back to Portfolio
+    </a>
+
+    <!-- Hero Section -->
+    <section class="hero">
+      <div class="hero-container">
+        <div class="hero-content">
+          <h1 class="hero-title">Bella Vista Ristorante</h1>
+          <p class="hero-subtitle">
+            Authentic Italian Cuisine in the Heart of the City
+          </p>
+          <div class="hero-buttons">
+            <a href="#menu" class="btn btn-primary">View Menu</a>
+            <a href="#reservation" class="btn btn-secondary"
+              >Make Reservation</a
+            >
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="about-section">
+      <div class="container">
+        <div class="about-content">
+          <div class="about-image">
+            <img
+              src="https://images.unsplash.com/photo-1559339352-11d035aa65de?ixlib=rb-4.0.3&auto=format&fit=crop&w=1470&q=80"
+              alt="Chef preparing pasta"
+            />
+          </div>
+          <div class="about-text">
+            <h3>Our Story</h3>
+            <p>
+              Founded in 1995, Bella Vista Ristorante brings the authentic
+              flavors of Italy to your table. Our family recipes have been
+              passed down through generations, ensuring every dish tells a story
+              of tradition and passion.
+            </p>
+            <p>
+              Using only the finest ingredients imported directly from Italy,
+              our master chefs create unforgettable dining experiences that
+              transport you straight to the streets of Rome, Florence, and
+              Naples.
+            </p>
+            <p>
+              From our handmade pasta to our wood-fired pizzas, every dish is
+              crafted with love and attention to detail that only comes from
+              decades of culinary expertise.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Menu Section -->
+    <section id="menu" class="menu-section">
+      <div class="container">
+        <h2 class="section-title">Our Menu</h2>
+        <div class="menu-grid">
+          <div class="menu-item">
+            <div class="menu-image">
+              <img
+                src="https://images.unsplash.com/photo-1621996346565-e3dbc353d2e5?ixlib=rb-4.0.3&auto=format&fit=crop&w=1470&q=80"
+                alt="Truffle Pasta"
+              />
+            </div>
+            <div class="menu-content">
+              <h3 class="menu-title">Truffle Mushroom Pasta</h3>
+              <p class="menu-description">
+                Handmade fettuccine with wild mushrooms, truffle oil, and aged
+                parmesan cheese.
+              </p>
+              <div class="menu-price">$24</div>
+            </div>
+          </div>
+
+          <div class="menu-item">
+            <div class="menu-image">
+              <img
+                src="https://images.unsplash.com/photo-1565299624946-b28f40a0ca4b?ixlib=rb-4.0.3&auto=format&fit=crop&w=1470&q=80"
+                alt="Margherita Pizza"
+              />
+            </div>
+            <div class="menu-content">
+              <h3 class="menu-title">Margherita Pizza</h3>
+              <p class="menu-description">
+                Wood-fired pizza with San Marzano tomatoes, fresh mozzarella,
+                and basil.
+              </p>
+              <div class="menu-price">$18</div>
+            </div>
+          </div>
+
+          <div class="menu-item">
+            <div class="menu-image">
+              <img
+                src="https://images.unsplash.com/photo-1563379091339-03246963d60a?ixlib=rb-4.0.3&auto=format&fit=crop&w=1470&q=80"
+                alt="Osso Buco"
+              />
+            </div>
+            <div class="menu-content">
+              <h3 class="menu-title">Osso Buco alla Milanese</h3>
+              <p class="menu-description">
+                Braised veal shanks with gremolata, served with saffron risotto.
+              </p>
+              <div class="menu-price">$32</div>
+            </div>
+          </div>
+
+          <div class="menu-item">
+            <div class="menu-image">
+              <img
+                src="https://images.unsplash.com/photo-1551024709-8f23befc6f87?ixlib=rb-4.0.3&auto=format&fit=crop&w=1470&q=80"
+                alt="Tiramisu"
+              />
+            </div>
+            <div class="menu-content">
+              <h3 class="menu-title">Classic Tiramisu</h3>
+              <p class="menu-description">
+                Layers of coffee-soaked ladyfingers and mascarpone cream.
+              </p>
+              <div class="menu-price">$12</div>
+            </div>
+          </div>
+
+          <div class="menu-item">
+            <div class="menu-image">
+              <img
+                src="https://images.unsplash.com/photo-1551183053-bf91a1d81141?ixlib=rb-4.0.3&auto=format&fit=crop&w=1470&q=80"
+                alt="Bruschetta"
+              />
+            </div>
+            <div class="menu-content">
+              <h3 class="menu-title">Bruschetta al Pomodoro</h3>
+              <p class="menu-description">
+                Toasted bread with fresh tomatoes, basil, and extra virgin olive
+                oil.
+              </p>
+              <div class="menu-price">$8</div>
+            </div>
+          </div>
+
+          <div class="menu-item">
+            <div class="menu-image">
+              <img
+                src="https://images.unsplash.com/photo-1551218808-94e220e084d2?ixlib=rb-4.0.3&auto=format&fit=crop&w=1470&q=80"
+                alt="Gnocchi"
+              />
+            </div>
+            <div class="menu-content">
+              <h3 class="menu-title">Gnocchi alla Sorrentina</h3>
+              <p class="menu-description">
+                Potato gnocchi with tomato sauce, mozzarella, and fresh basil.
+              </p>
+              <div class="menu-price">$22</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Reservation Section -->
+    <section id="reservation" class="reservation-section">
+      <div class="container">
+        <h2 class="section-title">Make a Reservation</h2>
+        <div class="contact-content">
+          <div class="contact-info">
+            <h3>Book Your Table</h3>
+            <p>
+              Experience the authentic taste of Italy in our warm and inviting
+              atmosphere. Reserve your table today for an unforgettable dining
+              experience.
+            </p>
+            <div class="contact-details">
+              <div class="contact-item">
+                <i class="fas fa-phone"></i>
+                <span>(555) 123-4567</span>
+              </div>
+              <div class="contact-item">
+                <i class="fas fa-map-marker-alt"></i>
+                <span>123 Main Street, Downtown</span>
+              </div>
+              <div class="contact-item">
+                <i class="fas fa-clock"></i>
+                <span>Open Daily 5PM-11PM</span>
+              </div>
+            </div>
+          </div>
+          <form class="reservation-form">
+            <div class="form-group">
+              <input type="text" placeholder="Your Name" required />
+            </div>
+            <div class="form-group">
+              <input type="email" placeholder="Your Email" required />
+            </div>
+            <div class="form-group">
+              <input type="tel" placeholder="Phone Number" required />
+            </div>
+            <div class="form-group">
+              <input type="date" required />
+            </div>
+            <div class="form-group">
+              <select required>
+                <option value="">Select Time</option>
+                <option value="5:00">5:00 PM</option>
+                <option value="5:30">5:30 PM</option>
+                <option value="6:00">6:00 PM</option>
+                <option value="6:30">6:30 PM</option>
+                <option value="7:00">7:00 PM</option>
+                <option value="7:30">7:30 PM</option>
+                <option value="8:00">8:00 PM</option>
+                <option value="8:30">8:30 PM</option>
+                <option value="9:00">9:00 PM</option>
+                <option value="9:30">9:30 PM</option>
+                <option value="10:00">10:00 PM</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <select required>
+                <option value="">Number of Guests</option>
+                <option value="1">1 Person</option>
+                <option value="2">2 People</option>
+                <option value="3">3 People</option>
+                <option value="4">4 People</option>
+                <option value="5">5 People</option>
+                <option value="6">6 People</option>
+                <option value="7+">7+ People</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <textarea placeholder="Special Requests" rows="3"></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary">Book Table</button>
+          </form>
+        </div>
+      </div>
+    </section>
+
+    <!-- Hours Section -->
+    <section class="hours-section">
+      <div class="container">
+        <h2 class="section-title">Hours of Operation</h2>
+        <div class="hours-grid">
+          <div class="hours-item">
+            <h4>Monday - Thursday</h4>
+            <p>5:00 PM - 10:00 PM</p>
+          </div>
+          <div class="hours-item">
+            <h4>Friday - Saturday</h4>
+            <p>5:00 PM - 11:00 PM</p>
+          </div>
+          <div class="hours-item">
+            <h4>Sunday</h4>
+            <p>5:00 PM - 9:00 PM</p>
+          </div>
+          <div class="hours-item">
+            <h4>Happy Hour</h4>
+            <p>Monday - Friday<br />5:00 PM - 7:00 PM</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Bottom Disclaimer Banner -->
+    <div class="disclaimer-banner">
+      <i class="fas fa-info-circle"></i>
+      This is a demonstration website created by Dan's Web Development to
+      showcase our portfolio. This is not a real restaurant.
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
