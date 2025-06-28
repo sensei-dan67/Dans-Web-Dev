@@ -638,318 +638,310 @@ body {
 
 @media (max-width: 600px) {
     .container {
-        padding: 0 12px;
+        padding: 0 12px !important;
     }
     
     .navbar {
-        padding: 0.5rem 0;
+        padding: 0.5rem 0 !important;
     }
     
     .nav-logo h1, .nav-logo h2 {
-        font-size: 1.5rem;
+        font-size: 1.8rem !important;
     }
     
     .nav-menu {
-        top: 56px;
-        padding: 1rem 0;
+        top: 56px !important;
+        padding: 1rem 0 !important;
     }
     
     .nav-link {
-        font-size: 1.1rem;
-        padding: 1rem 0;
-        min-height: 44px;
-        display: flex;
-        align-items: center;
-        justify-content: center;
+        font-size: 1.2rem !important;
+        padding: 1rem 0 !important;
+        min-height: 44px !important;
+        display: flex !important;
+        align-items: center !important;
+        justify-content: center !important;
     }
     
     .hero {
-        min-height: 70vh;
-        padding: 2rem 0 1rem 0;
+        min-height: 70vh !important;
+        padding: 2rem 0 1rem 0 !important;
     }
     
     .hero-title {
-        font-size: 2.2rem;
-        margin-bottom: 0.5rem;
+        font-size: 2.5rem !important;
+        margin-bottom: 0.5rem !important;
     }
     
     .hero-subtitle {
-        font-size: 1.1rem;
-        margin-bottom: 1rem;
+        font-size: 1.2rem !important;
+        margin-bottom: 1rem !important;
     }
     
     .hero-buttons {
-        flex-direction: column;
-        gap: 0.75rem;
-        width: 100%;
+        flex-direction: column !important;
+        gap: 0.75rem !important;
+        width: 100% !important;
     }
     
     .btn {
-        width: 100%;
-        max-width: 280px;
-        padding: 12px 20px;
-        font-size: 1rem;
-        min-height: 44px;
+        width: 100% !important;
+        max-width: 280px !important;
+        padding: 12px 20px !important;
+        font-size: 1rem !important;
+        min-height: 44px !important;
     }
     
     .floating-card {
-        padding: 1rem;
-        font-size: 0.9rem;
+        padding: 1rem !important;
+        font-size: 0.9rem !important;
     }
     
     .floating-card h3 {
-        font-size: 0.9rem;
+        font-size: 0.9rem !important;
     }
     
     .services {
-        padding: 2.5rem 0;
+        padding: 2.5rem 0 !important;
     }
     
     .service-card {
-        padding: 1.5rem;
-        margin-bottom: 1rem;
+        padding: 1.5rem !important;
+        margin-bottom: 1rem !important;
     }
     
     .service-card h3 {
-        font-size: 1.3rem;
+        font-size: 1.4rem !important;
     }
     
     .pricing {
-        padding: 2.5rem 0;
+        padding: 2.5rem 0 !important;
     }
     
     .pricing-card {
-        padding: 1.5rem;
-        margin-bottom: 1rem;
+        padding: 1.5rem !important;
+        margin-bottom: 1rem !important;
     }
     
     .pricing-header h3 {
-        font-size: 1.3rem;
+        font-size: 1.4rem !important;
     }
     
     .price {
-        font-size: 2.2rem;
+        font-size: 2.2rem !important;
     }
     
     .pricing-features {
-        margin-bottom: 1.5rem;
+        margin-bottom: 1.5rem !important;
     }
     
     .pricing-features li {
-        padding: 0.75rem 0;
-        font-size: 0.95rem;
+        padding: 0.75rem 0 !important;
+        font-size: 0.95rem !important;
+        line-height: 1.4 !important;
     }
     
     .pricing-addons {
-        margin-bottom: 1.5rem;
+        margin-bottom: 1.5rem !important;
+        padding: 1rem !important;
     }
     
     .pricing-addons h4 {
-        font-size: 1rem;
-        margin-bottom: 0.75rem;
+        font-size: 1rem !important;
+        margin-bottom: 0.75rem !important;
     }
     
     .pricing-addons ul {
-        font-size: 0.85rem;
+        font-size: 0.85rem !important;
+    }
+    
+    .pricing-addons li {
+        padding: 0.25rem 0 !important;
     }
     
     .portfolio {
-        padding: 2.5rem 0;
+        padding: 2.5rem 0 !important;
     }
     
     .portfolio-image {
-        height: 200px;
+        height: 200px !important;
     }
     
+    /* Force portfolio overlays to always show on mobile */
     .portfolio-overlay {
-        padding: 1.5rem;
-        opacity: 1;
-        background: rgba(37, 99, 235, 0.95);
+        opacity: 1 !important;
+        background: rgba(37, 99, 235, 0.95) !important;
+        padding: 1.5rem !important;
+        position: relative !important;
     }
     
     .portfolio-overlay h3 {
-        font-size: 1.3rem;
-        margin-bottom: 0.75rem;
+        font-size: 1.4rem !important;
+        margin-bottom: 0.75rem !important;
     }
     
     .portfolio-overlay p {
-        font-size: 0.9rem;
-        margin-bottom: 1rem;
-        line-height: 1.4;
+        font-size: 0.9rem !important;
+        margin-bottom: 1rem !important;
+        line-height: 1.4 !important;
     }
     
     .contact {
-        padding: 2.5rem 0;
+        padding: 2.5rem 0 !important;
     }
     
     .contact-content {
-        flex-direction: column;
-        gap: 2rem;
+        flex-direction: column !important;
+        gap: 2rem !important;
     }
     
     .contact-info {
-        order: 1;
-        text-align: center;
+        order: 1 !important;
+        text-align: center !important;
     }
     
     .contact-info h3 {
-        font-size: 1.5rem;
-        margin-bottom: 1rem;
+        font-size: 1.6rem !important;
+        margin-bottom: 1rem !important;
     }
     
     .contact-info p {
-        font-size: 1.1rem;
-        margin-bottom: 1.5rem;
-        line-height: 1.6;
+        font-size: 1.1rem !important;
+        margin-bottom: 1.5rem !important;
+        line-height: 1.6 !important;
     }
     
     .contact-details {
-        gap: 1.5rem;
+        gap: 1.5rem !important;
     }
     
     .contact-item {
-        font-size: 1.1rem;
-        gap: 1rem;
-    }
-    
-    .contact-form {
-        order: 2;
-        padding: 1.5rem;
-    }
-    
-    .form-group input,
-    .form-group select,
-    .form-group textarea {
-        padding: 14px;
-        font-size: 16px;
+        font-size: 1.1rem !important;
+        gap: 1rem !important;
     }
     
     .footer {
-        padding: 2rem 0 1rem;
+        padding: 2rem 0 1rem !important;
     }
     
     .footer-content {
-        gap: 1.5rem;
+        gap: 1.5rem !important;
     }
     
     .footer-section h3, .footer-section h4 {
-        font-size: 1.1rem;
+        font-size: 1.1rem !important;
     }
     
     .footer-bottom {
-        padding-top: 1.5rem;
-        font-size: 0.9rem;
+        padding-top: 1.5rem !important;
+        font-size: 0.9rem !important;
     }
 }
 
 @media (max-width: 480px) {
     .hero-title {
-        font-size: 1.8rem;
+        font-size: 2rem !important;
     }
 
     .section-title {
-        font-size: 2rem;
+        font-size: 2.2rem !important;
     }
 
     .services-grid,
     .pricing-grid,
     .portfolio-grid {
-        grid-template-columns: 1fr;
-        gap: 1rem;
+        grid-template-columns: 1fr !important;
+        gap: 1rem !important;
     }
     
     .container {
-        padding: 0 8px;
+        padding: 0 8px !important;
     }
     
     .hero-title {
-        font-size: 1.6rem;
+        font-size: 1.8rem !important;
     }
     
     .hero-subtitle {
-        font-size: 1rem;
+        font-size: 1rem !important;
     }
     
     .btn {
-        padding: 10px 16px;
-        font-size: 0.95rem;
+        padding: 10px 16px !important;
+        font-size: 0.95rem !important;
     }
     
     .service-card,
     .pricing-card {
-        padding: 1.2rem;
+        padding: 1.2rem !important;
     }
     
     .service-card h3 {
-        font-size: 1.2rem;
+        font-size: 1.3rem !important;
     }
     
     .pricing-header h3 {
-        font-size: 1.2rem;
+        font-size: 1.3rem !important;
     }
     
     .portfolio-image {
-        height: 160px;
+        height: 160px !important;
     }
     
     .portfolio-overlay {
-        padding: 1.2rem;
+        padding: 1.2rem !important;
     }
     
     .portfolio-overlay h3 {
-        font-size: 1.2rem;
-    }
-    
-    .contact-form {
-        padding: 1.2rem;
+        font-size: 1.3rem !important;
     }
     
     .contact-info h3 {
-        font-size: 1.3rem;
+        font-size: 1.4rem !important;
     }
     
     .contact-info p {
-        font-size: 1rem;
+        font-size: 1rem !important;
     }
 }
 
 @media (max-width: 375px) {
     .hero-title, .section-title {
-        font-size: 1.5rem;
+        font-size: 1.6rem !important;
     }
     
     .hero-subtitle {
-        font-size: 0.9rem;
+        font-size: 0.9rem !important;
     }
     
     .portfolio-image {
-        height: 140px;
+        height: 140px !important;
     }
     
     .footer-section h3, .footer-section h4 {
-        font-size: 1rem;
+        font-size: 1rem !important;
     }
     
     .btn {
-        font-size: 0.9rem;
-        padding: 8px 12px;
+        font-size: 0.9rem !important;
+        padding: 8px 12px !important;
     }
     
     .service-card h3,
     .pricing-header h3,
     .portfolio-overlay h3 {
-        font-size: 1.1rem;
+        font-size: 1.2rem !important;
     }
     
     .price {
-        font-size: 1.8rem;
+        font-size: 1.8rem !important;
     }
     
     .contact-info h3 {
-        font-size: 1.2rem;
+        font-size: 1.3rem !important;
     }
     
     .contact-info p {
-        font-size: 0.95rem;
+        font-size: 0.95rem !important;
     }
 } 
