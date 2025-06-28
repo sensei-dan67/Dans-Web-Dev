@@ -279,16 +279,18 @@
               and inventory management.
             </p>
           </article>
-          <article class="service-card">
-            <div class="service-icon">
-              <i class="fas fa-magic" aria-hidden="true"></i>
-            </div>
-            <h3>Custom Animations</h3>
-            <p>
-              Interactive animations and effects that enhance user experience
-              and make your website stand out.
-            </p>
-          </article>
+          <div class="center-service-card-row">
+            <article class="service-card" id="custom-animations">
+              <div class="service-icon">
+                <i class="fas fa-magic" aria-hidden="true"></i>
+              </div>
+              <h3>Custom Animations</h3>
+              <p>
+                Interactive animations and effects that enhance user experience
+                and make your website stand out.
+              </p>
+            </article>
+          </div>
         </div>
       </div>
     </section>
@@ -451,16 +453,17 @@
                 width="400"
                 height="300"
               />
-              <div class="portfolio-overlay">
-                <h3>Bella Vista Ristorante</h3>
-                <p>
-                  Elegant Italian restaurant website with online reservations
-                </p>
-                <a href="italian-restaurant.html" class="btn btn-secondary"
-                  >View Project</a
-                >
-              </div>
             </div>
+            <div class="portfolio-desc">
+              <h3>Bella Vista Ristorante</h3>
+              <p>Elegant Italian restaurant website with online reservations</p>
+            </div>
+            <a
+              href="italian-restaurant.html"
+              class="btn btn-secondary"
+              aria-label="View Bella Vista Ristorante project"
+              >View Project</a
+            >
           </article>
           <article class="portfolio-item">
             <div class="portfolio-image">
@@ -471,14 +474,17 @@
                 width="400"
                 height="300"
               />
-              <div class="portfolio-overlay">
-                <h3>Green Thumb Landscaping</h3>
-                <p>Professional landscaping company with service showcase</p>
-                <a href="landscaping.html" class="btn btn-secondary"
-                  >View Project</a
-                >
-              </div>
             </div>
+            <div class="portfolio-desc">
+              <h3>Green Thumb Landscaping</h3>
+              <p>Professional landscaping company with service showcase</p>
+            </div>
+            <a
+              href="landscaping.html"
+              class="btn btn-secondary"
+              aria-label="View Green Thumb Landscaping project"
+              >View Project</a
+            >
           </article>
           <article class="portfolio-item">
             <div class="portfolio-image">
@@ -489,14 +495,17 @@
                 width="400"
                 height="300"
               />
-              <div class="portfolio-overlay">
-                <h3>Classic Cuts Barbershop</h3>
-                <p>Modern barbershop with online booking system</p>
-                <a href="barbershop.html" class="btn btn-secondary"
-                  >View Project</a
-                >
-              </div>
             </div>
+            <div class="portfolio-desc">
+              <h3>Classic Cuts Barbershop</h3>
+              <p>Modern barbershop with online booking system</p>
+            </div>
+            <a
+              href="barbershop.html"
+              class="btn btn-secondary"
+              aria-label="View Classic Cuts Barbershop project"
+              >View Project</a
+            >
           </article>
         </div>
       </div>
@@ -513,7 +522,7 @@
         <h2 id="contact-title" class="section-title">Get In Touch</h2>
         <div class="contact-content">
           <div class="contact-info">
-            <h3>Ready to start your project?</h3>
+            <h3 id="ready-to-start">Ready to start your project?</h3>
             <p>
               Let's discuss how I can help bring your vision to life with a
               professional website that drives results.
@@ -531,6 +540,42 @@
               </div>
             </div>
           </div>
+          <form class="contact-form" aria-label="Contact form">
+            <div class="form-group">
+              <input
+                type="text"
+                name="name"
+                placeholder="Your Name"
+                required
+                aria-label="Your Name"
+              />
+            </div>
+            <div class="form-group">
+              <input
+                type="email"
+                name="email"
+                placeholder="Your Email"
+                required
+                aria-label="Your Email"
+              />
+            </div>
+            <div class="form-group">
+              <textarea
+                name="message"
+                rows="4"
+                placeholder="Your Message"
+                required
+                aria-label="Your Message"
+              ></textarea>
+            </div>
+            <button
+              type="submit"
+              class="btn btn-primary"
+              aria-label="Send Message"
+            >
+              Send Message
+            </button>
+          </form>
         </div>
       </div>
     </section>

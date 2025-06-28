@@ -1,0 +1,112 @@
+{
+  "designSystem": {
+    "name": "Modern Minimal Card UI",
+    "version": "1.0.0",
+    "description": "A clean, modern, and minimal card-based UI system for mobile and web apps.",
+    "typography": {
+      "fontFamily": {
+        "primary": "Sans-serif, e.g., Inter, Helvetica, Arial",
+        "fallback": "system-ui"
+      },
+      "fontWeights": {
+        "regular": 400,
+        "medium": 500,
+        "bold": 700
+      },
+      "scale": {
+        "display": "2.2rem - 2.8rem",
+        "headline": "1.5rem - 2rem",
+        "body": "1rem - 1.2rem",
+        "caption": "0.85rem"
+      },
+      "letterSpacing": "0.01em - 0.05em",
+      "lineHeight": "1.2 - 1.5"
+    },
+    "colorPalette": {
+      "background": "#F7F8FA",
+      "surface": "#FFFFFF",
+      "primary": "#FF6B35",
+      "secondary": "#2D3142",
+      "accent": "#4F5D75",
+      "textPrimary": "#22223B",
+      "textSecondary": "#6B7280",
+      "border": "#E5E7EB",
+      "shadow": "rgba(0,0,0,0.06)"
+    },
+    "spacing": {
+      "xs": "0.5rem",
+      "sm": "1rem",
+      "md": "1.5rem",
+      "lg": "2rem",
+      "xl": "3rem"
+    },
+    "borderRadius": {
+      "sm": "8px",
+      "md": "16px",
+      "lg": "24px"
+    },
+    "shadows": {
+      "card": "0 4px 24px rgba(0,0,0,0.06)"
+    },
+    "components": {
+      "card": {
+        "background": "#FFFFFF",
+        "borderRadius": "16px",
+        "boxShadow": "0 4px 24px rgba(0,0,0,0.06)",
+        "padding": "1.5rem",
+        "margin": "1rem 0"
+      },
+      "button": {
+        "primary": {
+          "background": "#FF6B35",
+          "color": "#FFFFFF",
+          "borderRadius": "24px",
+          "padding": "0.75rem 2rem",
+          "fontWeight": 700
+        },
+        "secondary": {
+          "background": "#FFFFFF",
+          "color": "#FF6B35",
+          "border": "2px solid #FF6B35",
+          "borderRadius": "24px",
+          "padding": "0.75rem 2rem",
+          "fontWeight": 700
+        }
+      },
+      "input": {
+        "background": "#F7F8FA",
+        "border": "1px solid #E5E7EB",
+        "borderRadius": "8px",
+        "padding": "1rem"
+      },
+      "icon": {
+        "color": "#FF6B35",
+        "size": "1.5rem"
+      }
+    },
+    "layout": {
+      "columns": {
+        "mobile": 1,
+        "tablet": 2,
+        "desktop": 3
+      },
+      "gutter": "1.5rem"
+    },
+    "responsive": {
+      "breakpoints": {
+        "mobile": "375px",
+        "tablet": "768px",
+        "desktop": "1200px"
+      }
+    },
+    "visualStyle": {
+      "cardBased": true,
+      "minimal": true,
+      "roundedCorners": true,
+      "softShadows": true,
+      "ampleWhiteSpace": true,
+      "vividAccentColor": true,
+      "centeredContent": true
+    }
+  }
+}
