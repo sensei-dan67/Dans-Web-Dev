@@ -636,18 +636,234 @@ body {
     }
 }
 
+@media (max-width: 600px) {
+    .container {
+        padding: 0 12px;
+    }
+    
+    .navbar {
+        padding: 0.5rem 0;
+    }
+    
+    .nav-logo h1, .nav-logo h2 {
+        font-size: 1.3rem;
+    }
+    
+    .nav-menu {
+        top: 56px;
+        padding: 1rem 0;
+    }
+    
+    .nav-link {
+        font-size: 1.1rem;
+        padding: 1rem 0;
+        min-height: 44px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    
+    .hero {
+        min-height: 70vh;
+        padding: 2rem 0 1rem 0;
+    }
+    
+    .hero-title {
+        font-size: 1.8rem;
+        margin-bottom: 0.5rem;
+    }
+    
+    .hero-subtitle {
+        font-size: 1rem;
+        margin-bottom: 1rem;
+    }
+    
+    .hero-buttons {
+        flex-direction: column;
+        gap: 0.75rem;
+        width: 100%;
+    }
+    
+    .btn {
+        width: 100%;
+        max-width: 280px;
+        padding: 12px 20px;
+        font-size: 1rem;
+        min-height: 44px;
+    }
+    
+    .floating-card {
+        padding: 1rem;
+        font-size: 0.9rem;
+    }
+    
+    .floating-card h3 {
+        font-size: 0.9rem;
+    }
+    
+    .services {
+        padding: 2.5rem 0;
+    }
+    
+    .service-card {
+        padding: 1.5rem;
+        margin-bottom: 1rem;
+    }
+    
+    .service-card h3 {
+        font-size: 1.2rem;
+    }
+    
+    .pricing {
+        padding: 2.5rem 0;
+    }
+    
+    .pricing-card {
+        padding: 1.5rem;
+        margin-bottom: 1rem;
+    }
+    
+    .pricing-header h3 {
+        font-size: 1.2rem;
+    }
+    
+    .price {
+        font-size: 2.2rem;
+    }
+    
+    .portfolio {
+        padding: 2.5rem 0;
+    }
+    
+    .portfolio-image {
+        height: 180px;
+    }
+    
+    .portfolio-overlay {
+        padding: 1.5rem;
+    }
+    
+    .portfolio-overlay h3 {
+        font-size: 1.2rem;
+    }
+    
+    .contact {
+        padding: 2.5rem 0;
+    }
+    
+    .contact-info h3 {
+        font-size: 1.3rem;
+    }
+    
+    .contact-info p {
+        font-size: 1rem;
+    }
+    
+    .contact-form {
+        padding: 1.5rem;
+    }
+    
+    .form-group input,
+    .form-group select,
+    .form-group textarea {
+        padding: 14px;
+        font-size: 16px; /* Prevents zoom on iOS */
+    }
+    
+    .footer {
+        padding: 2rem 0 1rem;
+    }
+    
+    .footer-content {
+        gap: 1.5rem;
+    }
+    
+    .footer-section h3, .footer-section h4 {
+        font-size: 1.1rem;
+    }
+    
+    .footer-bottom {
+        padding-top: 1.5rem;
+        font-size: 0.9rem;
+    }
+}
+
 @media (max-width: 480px) {
     .hero-title {
-        font-size: 2rem;
+        font-size: 1.6rem;
     }
 
     .section-title {
-        font-size: 2rem;
+        font-size: 1.8rem;
     }
 
     .services-grid,
     .pricing-grid,
     .portfolio-grid {
         grid-template-columns: 1fr;
+        gap: 1rem;
+    }
+    
+    .container {
+        padding: 0 8px;
+    }
+    
+    .hero-title {
+        font-size: 1.4rem;
+    }
+    
+    .hero-subtitle {
+        font-size: 0.9rem;
+    }
+    
+    .btn {
+        padding: 10px 16px;
+        font-size: 0.95rem;
+    }
+    
+    .service-card,
+    .pricing-card {
+        padding: 1.2rem;
+    }
+    
+    .portfolio-image {
+        height: 150px;
+    }
+    
+    .contact-form {
+        padding: 1.2rem;
+    }
+}
+
+@media (max-width: 375px) {
+    .hero-title, .section-title {
+        font-size: 1.3rem;
+    }
+    
+    .hero-subtitle {
+        font-size: 0.85rem;
+    }
+    
+    .portfolio-image {
+        height: 120px;
+    }
+    
+    .footer-section h3, .footer-section h4 {
+        font-size: 1rem;
+    }
+    
+    .btn {
+        font-size: 0.9rem;
+        padding: 8px 12px;
+    }
+    
+    .service-card h3,
+    .pricing-header h3,
+    .portfolio-overlay h3 {
+        font-size: 1.1rem;
+    }
+    
+    .price {
+        font-size: 1.8rem;
     }
 } 
