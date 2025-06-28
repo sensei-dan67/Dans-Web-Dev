@@ -646,7 +646,7 @@ body {
     }
     
     .nav-logo h1, .nav-logo h2 {
-        font-size: 1.3rem;
+        font-size: 1.5rem;
     }
     
     .nav-menu {
@@ -669,12 +669,12 @@ body {
     }
     
     .hero-title {
-        font-size: 1.8rem;
+        font-size: 2.2rem;
         margin-bottom: 0.5rem;
     }
     
     .hero-subtitle {
-        font-size: 1rem;
+        font-size: 1.1rem;
         margin-bottom: 1rem;
     }
     
@@ -711,7 +711,7 @@ body {
     }
     
     .service-card h3 {
-        font-size: 1.2rem;
+        font-size: 1.3rem;
     }
     
     .pricing {
@@ -724,11 +724,33 @@ body {
     }
     
     .pricing-header h3 {
-        font-size: 1.2rem;
+        font-size: 1.3rem;
     }
     
     .price {
         font-size: 2.2rem;
+    }
+    
+    .pricing-features {
+        margin-bottom: 1.5rem;
+    }
+    
+    .pricing-features li {
+        padding: 0.75rem 0;
+        font-size: 0.95rem;
+    }
+    
+    .pricing-addons {
+        margin-bottom: 1.5rem;
+    }
+    
+    .pricing-addons h4 {
+        font-size: 1rem;
+        margin-bottom: 0.75rem;
+    }
+    
+    .pricing-addons ul {
+        font-size: 0.85rem;
     }
     
     .portfolio {
@@ -736,30 +758,62 @@ body {
     }
     
     .portfolio-image {
-        height: 180px;
+        height: 200px;
     }
     
     .portfolio-overlay {
         padding: 1.5rem;
+        opacity: 1;
+        background: rgba(37, 99, 235, 0.95);
     }
     
     .portfolio-overlay h3 {
-        font-size: 1.2rem;
+        font-size: 1.3rem;
+        margin-bottom: 0.75rem;
+    }
+    
+    .portfolio-overlay p {
+        font-size: 0.9rem;
+        margin-bottom: 1rem;
+        line-height: 1.4;
     }
     
     .contact {
         padding: 2.5rem 0;
     }
     
+    .contact-content {
+        flex-direction: column;
+        gap: 2rem;
+    }
+    
+    .contact-info {
+        order: 1;
+        text-align: center;
+    }
+    
     .contact-info h3 {
-        font-size: 1.3rem;
+        font-size: 1.5rem;
+        margin-bottom: 1rem;
     }
     
     .contact-info p {
-        font-size: 1rem;
+        font-size: 1.1rem;
+        margin-bottom: 1.5rem;
+        line-height: 1.6;
+    }
+    
+    .contact-details {
+        gap: 1.5rem;
+    }
+    
+    .contact-item {
+        font-size: 1.1rem;
+        gap: 1rem;
     }
     
     .contact-form {
+        order: 2;
         padding: 1.5rem;
     }
     
@@ -767,7 +821,7 @@ body {
     .form-group select,
     .form-group textarea {
         padding: 14px;
-        font-size: 16px; /* Prevents zoom on iOS */
+        font-size: 16px;
     }
     
     .footer {
@@ -790,11 +844,11 @@ body {
 
 @media (max-width: 480px) {
     .hero-title {
-        font-size: 1.6rem;
+        font-size: 1.8rem;
     }
 
     .section-title {
-        font-size: 1.8rem;
+        font-size: 2rem;
     }
 
     .services-grid,
@@ -809,11 +863,11 @@ body {
     }
     
     .hero-title {
-        font-size: 1.4rem;
+        font-size: 1.6rem;
     }
     
     .hero-subtitle {
-        font-size: 0.9rem;
+        font-size: 1rem;
     }
     
     .btn {
@@ -826,26 +880,50 @@ body {
         padding: 1.2rem;
     }
     
+    .service-card h3 {
+        font-size: 1.2rem;
+    }
+    
+    .pricing-header h3 {
+        font-size: 1.2rem;
+    }
+    
     .portfolio-image {
-        height: 150px;
+        height: 160px;
+    }
+    
+    .portfolio-overlay {
+        padding: 1.2rem;
+    }
+    
+    .portfolio-overlay h3 {
+        font-size: 1.2rem;
     }
     
     .contact-form {
         padding: 1.2rem;
     }
+    
+    .contact-info h3 {
+        font-size: 1.3rem;
+    }
+    
+    .contact-info p {
+        font-size: 1rem;
+    }
 }
 
 @media (max-width: 375px) {
     .hero-title, .section-title {
-        font-size: 1.3rem;
+        font-size: 1.5rem;
     }
     
     .hero-subtitle {
-        font-size: 0.85rem;
+        font-size: 0.9rem;
     }
     
     .portfolio-image {
-        height: 120px;
+        height: 140px;
     }
     
     .footer-section h3, .footer-section h4 {
@@ -865,5 +943,13 @@ body {
     
     .price {
         font-size: 1.8rem;
+    }
+    
+    .contact-info h3 {
+        font-size: 1.2rem;
+    }
+    
+    .contact-info p {
+        font-size: 0.95rem;
     }
 } 
